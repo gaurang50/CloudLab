@@ -14,8 +14,9 @@ function App() {
         <Route path="/" element={<Navigate replace to="/login" />} />
         <Route path="/login" element={<Auth setCurrentUser={setCurrentUser} />} />
         <Route path="/signup" element={<SignUp />} />
-        {/* Pass currentUser to HomePage */}
+        {/* Pass currentUser to HomePage, note this path must align with your 'Home' button link */}
         <Route path="/home" element={<HomePage currentUser={currentUser} />} />
+        <Route path="/about" element={<HomePage currentUser={currentUser} />} />
       </Routes>
     </Router>
   );
